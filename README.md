@@ -8,10 +8,6 @@
 <img width="1918" height="908" alt="image" src="https://github.com/user-attachments/assets/8dbe827f-85e4-423c-9638-4175db808958" />
 <img width="1919" height="922" alt="image" src="https://github.com/user-attachments/assets/c6582ad7-2443-4a84-94b8-f04d4395e687" />
 
-
-
-Changes made via Lovable will be committed automatically to this repo.
-
 **Use your preferred IDE**
 
 If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
