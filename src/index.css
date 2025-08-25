@@ -2,41 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* E-Commerce Design System - Modern, Professional, Conversion-Focused */
 
 @layer base {
   :root {
+    /* Core Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 215 25% 15%;
+    
+    /* Card & Surface Colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 215 25% 15%;
+    --card-hover: 220 14% 96%;
+    
+    /* Interactive Elements */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --popover-foreground: 215 25% 15%;
+    
+    /* Brand Primary - Deep Professional Blue */
+    --primary: 220 90% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 220 90% 48%;
+    --primary-light: 220 90% 94%;
+    
+    /* Secondary - Warm Accent */
+    --secondary: 25 95% 53%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 25 95% 45%;
+    --secondary-light: 25 95% 94%;
+    
+    /* Neutral Tones */
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+    --muted-hover: 220 14% 92%;
+    
+    /* Success & Status */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 94%;
+    
+    /* Warning & Alerts */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 38 92% 94%;
+    
+    /* Error & Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-light: 0 84% 94%;
+    
+    /* Accent & Highlights */
+    --accent: 220 14% 96%;
+    --accent-foreground: 215 25% 15%;
+    --accent-hover: 220 14% 92%;
+    
+    /* Form Elements */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --input-hover: 220 13% 87%;
+    --ring: 220 90% 56%;
+    
+    /* Shadows & Effects */
+    --shadow-sm: 0 1px 2px 0 hsl(215 25% 15% / 0.05);
+    --shadow: 0 1px 3px 0 hsl(215 25% 15% / 0.1), 0 1px 2px -1px hsl(215 25% 15% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 15% / 0.1), 0 2px 4px -2px hsl(215 25% 15% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 15% / 0.1), 0 4px 6px -4px hsl(215 25% 15% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(215 25% 15% / 0.1), 0 8px 10px -6px hsl(215 25% 15% / 0.1);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 90% 56%), hsl(220 90% 48%));
+    --gradient-secondary: linear-gradient(135deg, hsl(25 95% 53%), hsl(25 95% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 90% 56%) 0%, hsl(25 95% 53%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 14% 98%) 100%);
+    
+    /* Animation & Transitions */
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +101,61 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Core Brand Colors - Dark */
+    --background: 215 28% 6%;
+    --foreground: 220 14% 95%;
+    
+    /* Card & Surface Colors - Dark */
+    --card: 215 28% 8%;
+    --card-foreground: 220 14% 95%;
+    --card-hover: 215 28% 12%;
+    
+    /* Interactive Elements - Dark */
+    --popover: 215 28% 8%;
+    --popover-foreground: 220 14% 95%;
+    
+    /* Brand Primary - Adjusted for Dark */
+    --primary: 220 90% 64%;
+    --primary-foreground: 215 28% 6%;
+    --primary-hover: 220 90% 70%;
+    --primary-light: 220 90% 16%;
+    
+    /* Secondary - Adjusted for Dark */
+    --secondary: 25 95% 60%;
+    --secondary-foreground: 215 28% 6%;
+    --secondary-hover: 25 95% 65%;
+    --secondary-light: 25 95% 16%;
+    
+    /* Neutral Tones - Dark */
+    --muted: 215 28% 14%;
+    --muted-foreground: 215 16% 70%;
+    --muted-hover: 215 28% 18%;
+    
+    /* Success & Status - Dark */
+    --success: 142 76% 45%;
+    --success-foreground: 215 28% 6%;
+    --success-light: 142 76% 16%;
+    
+    /* Warning & Alerts - Dark */
+    --warning: 38 92% 60%;
+    --warning-foreground: 215 28% 6%;
+    --warning-light: 38 92% 16%;
+    
+    /* Error & Destructive - Dark */
+    --destructive: 0 84% 70%;
+    --destructive-foreground: 215 28% 6%;
+    --destructive-light: 0 84% 16%;
+    
+    /* Accent & Highlights - Dark */
+    --accent: 215 28% 14%;
+    --accent-foreground: 220 14% 95%;
+    --accent-hover: 215 28% 18%;
+    
+    /* Form Elements - Dark */
+    --border: 215 28% 20%;
+    --input: 215 28% 20%;
+    --input-hover: 215 28% 24%;
+    --ring: 220 90% 64%;
   }
 }
 
@@ -100,6 +165,85 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* E-Commerce Specific Utilities */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  .transition-fast {
+    transition: var(--transition-fast);
+  }
+  
+  .transition-base {
+    transition: var(--transition-base);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-slow {
+    transition: var(--transition-slow);
+  }
+  
+  .shadow-custom {
+    box-shadow: var(--shadow);
+  }
+  
+  .shadow-custom-md {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shadow-custom-lg {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .shadow-custom-xl {
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+@layer components {
+  /* Product Card Base Styles */
+  .product-card {
+    @apply bg-card border border-border rounded-xl overflow-hidden transition-smooth hover:shadow-custom-md hover:border-border/60;
+  }
+  
+  /* Price Display Styles */
+  .price-primary {
+    @apply text-2xl font-bold text-foreground;
+  }
+  
+  .price-secondary {
+    @apply text-lg text-muted-foreground line-through;
+  }
+  
+  /* Badge Styles */
+  .badge-sale {
+    @apply bg-secondary text-secondary-foreground px-2 py-1 rounded-full text-xs font-medium;
+  }
+  
+  .badge-new {
+    @apply bg-primary text-primary-foreground px-2 py-1 rounded-full text-xs font-medium;
+  }
+  
+  /* Container Styles */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
