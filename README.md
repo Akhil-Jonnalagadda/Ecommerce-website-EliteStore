@@ -2,15 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/d58b3076-ff91-4496-85bb-2abbdfd53489
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/d58b3076-ff91-4496-85bb-2abbdfd53489) and start prompting.
+**URL**: 
 
 Changes made via Lovable will be committed automatically to this repo.
 
@@ -22,52 +14,92 @@ The only requirement is having Node.js & npm installed - [install with nvm](http
 
 Follow these steps:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# EliteStore Ecommerce Website
 
-# Step 3: Install the necessary dependencies.
-npm i
+EliteStore is a modern, full-featured ecommerce web application built with React, TypeScript, Vite, and Tailwind CSS. It provides a seamless shopping experience with secure Stripe payments, user account management, and a variety of informational and utility pages.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## Features
+- Product catalog and categories
+- Shopping cart and checkout
+- Stripe payment integration
+- Order tracking
+- User profile and order history
+- Quick links: About Us, Contact, Shipping Info, Returns & Exchanges, FAQ
+- Careers, Blog, Gift Cards, Store Locator
+- Responsive design for desktop and mobile
 
-**Edit a file directly in GitHub**
+## Tech Stack
+- **Frontend:** React, TypeScript, Vite, Tailwind CSS
+- **Backend:** Node.js, Express, Stripe API
+- **State Management:** React Context
+- **Routing:** React Router
+- **Styling:** Tailwind CSS
+- **Payments:** Stripe
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Implementation Overview
+- The frontend is built with React and TypeScript, using Vite for fast development and Tailwind CSS for styling.
+- Stripe integration is handled via the Stripe API and React Stripe.js for secure payments.
+- The backend (in `/server`) uses Express and Stripe to create payment intents and handle payment processing.
+- All pages are routed using React Router, including utility pages like Track Order, Careers, Blog, Gift Cards, and Store Locator.
+- Context API is used for cart state management.
 
-**Use GitHub Codespaces**
+## Getting Started
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Prerequisites
+- Node.js and npm installed
+- Stripe account for API keys
 
-## What technologies are used for this project?
+### Installation
+1. Clone the repository:
+	```sh
+	git clone https://github.com/Akhil-Jonnalagadda/Ecommerce-website-EliteStore.git
+	cd Ecommerce-website-EliteStore
+	```
+2. Install frontend dependencies:
+	```sh
+	npm install
+	```
+3. Install backend dependencies:
+	```sh
+	cd server
+	npm install
+	cd ..
+	```
+4. Add your Stripe secret key to `server/.env`:
+	```env
+	STRIPE_SECRET_KEY=your_stripe_secret_key
+	PORT=4242
+	```
 
-This project is built with:
+### Running the Application
+1. Start the backend server:
+	```sh
+	cd server
+	node index.cjs
+	```
+2. Start the frontend development server:
+	```sh
+	npm run dev
+	```
+3. Open your browser at [http://localhost:8080](http://localhost:8080)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Usage
+- Browse products, add to cart, and checkout securely with Stripe.
+- Track your order using the Track Order page.
+- Explore informational pages via the footer and header navigation.
+- Apply for jobs, read blog posts, purchase gift cards, and locate stores.
 
-## How can I deploy this project?
+## Contributing
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/my-feature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/my-feature`)
+5. Open a pull request
 
-Simply open [Lovable](https://lovable.dev/projects/d58b3076-ff91-4496-85bb-2abbdfd53489) and click on Share -> Publish.
+## License
+This project is licensed under the MIT License.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+For any questions or support, contact Akhil Jonnalagadda.
