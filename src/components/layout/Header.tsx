@@ -45,6 +45,9 @@ const Header = ({ cartItemsCount = 0 }: HeaderProps) => {
             <Link to="/deals" className="text-foreground hover:text-primary transition-base">
               Deals
             </Link>
+            <Link to="/track-order" className="text-foreground hover:text-primary transition-base">
+              Track Order
+            </Link>
           </nav>
 
           {/* Search Bar - Desktop */}
@@ -154,6 +157,13 @@ const Header = ({ cartItemsCount = 0 }: HeaderProps) => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Deals
+              </Link>
+              <Link
+                to="/track-order"
+                className="block px-3 py-2 text-base text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-base"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Track Order
               </Link>
             </div>
           </div>

@@ -5,16 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "@/contexts/CartContext";
 import Layout from "@/components/layout/Layout";
-import About from "@/pages/About";
-import Contact from "@/pages/Contact";
-import Shipping from "@/pages/Shipping";
-import Returns from "@/pages/Returns";
-import FAQ from "@/pages/FAQ";
-import Careers from "@/pages/Careers";
-import Blog from "@/pages/Blog";
-import GiftCards from "@/pages/GiftCards";
-import StoreLocator from "@/pages/StoreLocator";
-import TrackOrder from "@/pages/TrackOrder";
 import Home from "@/pages/Home";
 import Products from "@/pages/Products";
 import Cart from "@/pages/Cart";
@@ -48,16 +38,6 @@ const App = () => (
               <Route path="/change-password" element={<ChangePassword />} />
               <Route path="/email-preferences" element={<EmailPreferences />} />
               <Route path="/saved-addresses" element={<SavedAddresses />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/shipping" element={<Shipping />} />
-              <Route path="/returns" element={<Returns />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/gift-cards" element={<GiftCards />} />
-              <Route path="/store-locator" element={<StoreLocator />} />
-              <Route path="/track-order" element={<TrackOrder />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>

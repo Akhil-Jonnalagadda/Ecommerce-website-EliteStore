@@ -55,21 +55,6 @@ const Footer = () => {
               <Link to="/faq" className="block text-muted-foreground hover:text-primary transition-base text-sm">
                 FAQ
               </Link>
-              <Link to="/careers" className="block text-muted-foreground hover:text-primary transition-base text-sm">
-                Careers
-              </Link>
-              <Link to="/blog" className="block text-muted-foreground hover:text-primary transition-base text-sm">
-                Blog
-              </Link>
-              <Link to="/gift-cards" className="block text-muted-foreground hover:text-primary transition-base text-sm">
-                Gift Cards
-              </Link>
-              <Link to="/store-locator" className="block text-muted-foreground hover:text-primary transition-base text-sm">
-                Store Locator
-              </Link>
-              <Link to="/track-order" className="block text-muted-foreground hover:text-primary transition-base text-sm">
-                Track Order
-              </Link>
             </div>
           </div>
 

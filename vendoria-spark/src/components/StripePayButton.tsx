@@ -1,0 +1,42 @@
+// Stripe frontend integration example
+import { useState } from "react";
+import StripeCheckout from "./StripeCheckout";
+
+const STRIPE_PUBLISHABLE_KEY = "pk_test_51Rj28fFl4Qkf8hQYAMdkEW4bt4HZleqpPtJYwo4EtSrKigzNk24hNzFHpogGhgyixxtLHEwM9Nz1jnwspYP70OqB00enl4rHPF";
+
+export default function StripePayButton({ amount, onPay }) {
+  const [loading, setLoading] = useState(false);
+  const [clientSecret, setClientSecret] = useState("");
+  const [showCheckout, setShowCheckout] = useState(false);
+
+  const handlePay = async () => {
+    if (onPay) onPay();
+    setLoading(true);
+    // Call backend to create payment intent
+    const res = await fetch("http://localhost:4242/create-payment-intent", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ amount, currency: "usd" })
+    });
+    const data = await res.json();
+    setClientSecret(data.clientSecret);
+    setLoading(false);
+    setShowCheckout(true);
+  };
+
+  return (
+    <>
+      <button onClick={handlePay} disabled={loading} style={{padding: '10px 20px', background: '#635bff', color: '#fff', border: 'none', borderRadius: '4px'}}>
+        {loading ? "Processing..." : "Pay with Stripe"}
+      </button>
+      {showCheckout && clientSecret && (
+        <div style={{position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.5)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+          <div style={{background: '#fff', padding: 32, borderRadius: 8, minWidth: 350}}>
+            <StripeCheckout clientSecret={clientSecret} />
+            <button onClick={() => setShowCheckout(false)} style={{marginTop: 16}}>Close</button>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
