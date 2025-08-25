@@ -54,7 +54,7 @@ EliteStore is a modern, full-featured ecommerce web application built with React
 - Node.js and npm installed
 - Stripe account for API keys
 
-### Installation
+### Installation process
 1. Clone the repository:
 	```sh
 	git clone https://github.com/Akhil-Jonnalagadda/Ecommerce-website-EliteStore.git
