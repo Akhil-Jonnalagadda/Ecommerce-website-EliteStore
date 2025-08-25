@@ -8,6 +8,10 @@ import Layout from "@/components/layout/Layout";
 import Home from "@/pages/Home";
 import Products from "@/pages/Products";
 import Cart from "@/pages/Cart";
+import Profile from "@/pages/Profile";
+import Orders from "@/pages/Orders";
+import Categories from "@/pages/Categories";
+import Deals from "@/pages/Deals";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +28,10 @@ const App = () => (
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/orders" element={<Orders />} />
+              <Route path="/categories" element={<Categories />} />
+              <Route path="/deals" element={<Deals />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
