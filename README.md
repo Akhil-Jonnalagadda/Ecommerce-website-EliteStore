@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# EliteStore – Modern Ecommerce Platform
 
 ## Project info
 
