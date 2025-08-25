@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: 
+**URL**: https://vendoria-spark.vercel.app/
 
 Changes made via Lovable will be committed automatically to this repo.
 
