@@ -12,16 +12,27 @@ export default function StripePayButton({ amount, onPay }) {
   const handlePay = async () => {
     if (onPay) onPay();
     setLoading(true);
-    // Call backend to create payment intent
-    const res = await fetch("http://localhost:4242/create-payment-intent", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ amount, currency: "usd" })
-    });
-    const data = await res.json();
-    setClientSecret(data.clientSecret);
+    try {
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:4242";
+      const res = await fetch(`${backendUrl}/create-payment-intent`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ amount, currency: "usd" })
+      });
+      const data = await res.json();
+      console.log('Stripe response:', data);
+      if (!data.clientSecret) {
+        alert('Payment initialization failed: ' + (data.error || 'No client secret returned'));
+        setLoading(false);
+        return;
+      }
+      setClientSecret(data.clientSecret);
+      setShowCheckout(true);
+    } catch (err) {
+      console.error('StripePayButton error:', err);
+      alert('Payment error: ' + err.message);
+    }
     setLoading(false);
-    setShowCheckout(true);
   };
 
   return (

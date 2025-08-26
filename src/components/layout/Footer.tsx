@@ -16,7 +16,7 @@ const Footer = () => {
               </div>
               <span className="font-bold text-xl text-foreground">EliteStore</span>
             </div>
-            <p className="text-muted-foreground text-sm leading-relaxed">
+            <p className="text-green-300 text-sm leading-relaxed">
               Your premier destination for quality products. We deliver excellence in every purchase, 
               backed by outstanding customer service and competitive prices.
             </p>
