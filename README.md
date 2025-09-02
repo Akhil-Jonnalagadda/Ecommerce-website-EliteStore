@@ -101,7 +101,6 @@ EliteStore is a modern, full-featured ecommerce web application built with React
 4. Push to the branch (`git push origin feature/my-feature`)
 5. Open a pull request
    
-# Some UI interfaces in this project were created using Lovable AI to accelerate development and enhance design quality.
 
 ## License
 This project is licensed under the MIT License.
